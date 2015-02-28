@@ -1,5 +1,5 @@
 # Ubuntu/precise is the main distribution
-FROM ubuntu:trusty
+FROM debian:7
 
 # setup java ppa
 RUN rm -rvf /var/lib/apt/lists/*
