@@ -1,6 +1,9 @@
 # Ubuntu/precise is the main distribution
 FROM debian:7
 
+# auto validate license
+RUN echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
+
 # setup java ppa
 RUN rm -rvf /var/lib/apt/lists/*
 RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee /etc/apt/sources.list.d/webupd8team-java.list
