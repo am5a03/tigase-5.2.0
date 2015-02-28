@@ -1,7 +1,7 @@
 Tigase XMPP Server Docker image
 ===========================================
 
-Docker image with Tigase XMPP server (5.2.3) installed for evaluation purpose.
+Docker image with Tigase XMPP server (7.0.0) installed for evaluation purpose.
 
 DO NOT use in production environment.
 
