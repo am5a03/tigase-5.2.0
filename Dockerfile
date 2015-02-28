@@ -10,6 +10,7 @@ RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | te
 RUN echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886
 RUN apt-get update
+RUN apt-get install ca-certificates -y
 RUN apt-get install --no-install-recommends -y libssl1.0.0 openssl postgresql-client
 RUN apt-get install --no-install-recommends -y software-properties-common python-software-properties
 RUN apt-get install oracle-java7-installer -y
