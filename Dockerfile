@@ -3,13 +3,13 @@ FROM debian:7
 
 # setup java ppa
 RUN rm -rvf /var/lib/apt/lists/*
-RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main" | tee /etc/apt/sources.list.d/webupd8team-java.list
-RUN echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu precise main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list
+RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee /etc/apt/sources.list.d/webupd8team-java.list
+RUN echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886
 RUN apt-get update
 RUN apt-get install --no-install-recommends -y libssl1.0.0 openssl postgresql-client
 RUN apt-get install --no-install-recommends -y software-properties-common python-software-properties
-RUN apt-get install -y oracle-java7-installer
+RUN apt-get install oracle-java7-installer -y
 
 # add wget
 RUN apt-get update
