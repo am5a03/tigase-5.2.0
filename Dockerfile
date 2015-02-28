@@ -21,7 +21,7 @@ RUN echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true 
 RUN apt-get install --no-install-recommends -y wget oracle-java7-installer
 
 # download and install tigase
-RUN wget 'http://projects.tigase.org/attachments/download/2321/tigase-server-7.0.0-b3802-dist-max.tar.gz' -O /tmp/tigase-server.tar.gz
+RUN wget 'https://projects.tigase.org/attachments/download/1337/tigase-server-5.2.0-b3447-dist-max.tar.gz' -O /tmp/tigase-server.tar.gz
 RUN tar -xC /opt -zf /tmp/tigase-server.tar.gz
 RUN mv /opt/tigase-server* /opt/tigase-server
 
