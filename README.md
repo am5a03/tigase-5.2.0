@@ -1,7 +1,7 @@
 Tigase XMPP Server Docker image
 ===========================================
 
-Docker image with Tigase XMPP server (7.0.0) installed for evaluation purpose.
+Docker image with Tigase XMPP server (5.2.0) installed for evaluation purpose.
 
 DO NOT use in production environment.
 
@@ -13,7 +13,7 @@ Usage
 
 To start the tigase xmpp server, run
 
-`docker run -d -p 5222:5222 --name tigase dictcp/tigase`
+`docker run -d -p 5222:5222 --name tigase am5a03/tigase-5.2.0`
 
 You can connect to the server (localhost) using regular XMPP client (eg. Psi) with user admin@tigase.net (password: 123456).
 
